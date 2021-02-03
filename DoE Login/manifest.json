@@ -1,0 +1,47 @@
+{
+  "name": "DoE Login",
+  "manifest_version": 2,    
+  "version": "1.0",
+  "description": "..!",
+
+  "browser_action": {
+    "default_icon": "icon.png",     
+    "default_popup":"popup.html"    
+  },
+
+ 
+//declaring the permissions that will be used in this extension
+
+ "permissions": ["http://webauth.education.tas.gov.au",
+  "storage",
+    "webRequest",
+    "webRequestBlocking"
+
+],
+
+  "background": {
+    "scripts": ["autofill.js"] 
+  },
+      
+
+
+/* Content scripts are JavaScript files that run in the context of web pages. By using the standard Document Object Model (DOM), they can read details of the web pages the browser visits, or make changes to them */
+
+"content_scripts": [
+    {
+//Specifies which pages this content script will be injected into
+    "matches": ["http://webauth.education.tas.gov.au/"], 
+
+//The list of JavaScript files to be injected into matching pages
+    "js": ["autofill.js"],
+
+//Controls when the files at "js" are being injected
+    "run_at": "document_end",
+
+    "all_frames": true
+    }
+]
+
+
+
+}
