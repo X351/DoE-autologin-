@@ -10,4 +10,7 @@ then goto the "var myPassword" and replace "password" with your password.
 
 
 To Install
-goto "edge://extensions/" in edge or "chrome://extensions/" and 
+goto "edge://extensions/" in edge or "chrome://extensions/" and add the exstention via the dev settings
+
+video on how to:
+https://youtu.be/hIRX1dpfqHc?t=12
